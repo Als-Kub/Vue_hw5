@@ -1,0 +1,237 @@
+.center-wide {
+    padding-left: calc(50% - 750px);
+    padding-right: calc(50% - 750px);
+}
+
+
+.top-blog {
+    &__box {
+        min-height: 356px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-image: url(../img/Blog/top_img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        margin-bottom: 200px;
+
+    }
+
+    &__content {
+        max-width: 503px;
+        background-color: $btn_clr;
+        padding: 41px 78px;
+        border-radius: 37px 37px 0 0;
+    }
+
+    &__title {
+        @include title_fonts;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    &__links {
+        text-align: center;
+    }
+
+    &__link {
+        @include text_fonts;
+        font-size: 22px;
+        text-decoration: none;
+        &:not(:last-child)::after {
+            content: ' /';
+                }
+
+    }
+
+}
+
+.post {
+    margin-bottom: 96px;
+
+    &__title {
+        @include title_fonts;
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    &__subtitle {
+        @include title_fonts;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        margin-bottom: 22px;
+    }
+
+    &__text {
+        @include text_fonts;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        margin-bottom: 55px;
+    }
+
+
+    &__text_mb {
+        margin-bottom: 41px;
+    }
+
+    &__date-text {
+        @include text_fonts;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+    }
+
+    &__content {
+        display: flex;
+        padding: 21px;
+        border-radius: 62px;
+        border: 1px solid $border_clr;
+        gap: 65px;
+        align-items: center;
+    }
+
+    &__date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img-box {
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+}
+
+.card {
+
+    &__img-box {
+        margin-bottom: 24px;
+
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img {
+        border-top-right-radius: 80px;
+    }
+    &__title {
+        @include title_fonts;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+     }
+    &__text {
+        @include text_fonts;
+        font-size: 22px;
+    }
+    &__img-box_radius-tr {
+        border-top-right-radius: 80px;
+    } 
+    &__img-box_radius-tl {
+        border-top-left-radius: 80px;
+    } 
+    &__img-box_radius-br {
+        border-bottom-right-radius: 80px;
+    } 
+    &__img-box_radius-bl {
+        border-bottom-left-radius: 80px;
+    } 
+
+    &__img-box-radius_double {
+        border-top-right-radius: 45px;
+        border-top-left-radius: 45px;
+    }
+    &__title_margin {
+        margin: 21px 0 30px;
+    }
+    &__title_font-size {
+        font-size: 25px; 
+    }
+}
+
+
+.button-round {
+    border-radius: 50%;
+    border-color: transparent;   
+}
+
+.blog {
+    margin-bottom: 200px;
+    
+    &__cards {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 28px;
+        row-gap: 30px;
+        margin-bottom: 51px;
+    }
+
+    &__card-desc {        
+        position:absolute;
+        top: 248px;
+        left: 41px;
+        @include text_fonts;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        padding: 8px 11px;
+        background-color: $btn_clr;
+        border-radius: 8px 8px 8px 0px;
+    }
+
+    &__title {
+        @include title_fonts;
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    &__title_align-left {
+        text-align: left;
+    }
+
+    &__text {
+
+        @include text_fonts;
+        font-size: 22px;
+        margin-bottom: 93px;
+        padding: 0 17%;
+        text-align: center;
+    }
+
+    &__card-box {
+        position: relative;
+        padding: 21px;
+        border: 1px solid $border_clr;
+        border-radius: 62px;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        @include text_fonts;
+        font-size: 16px;
+        font-weight: 500;
+        color: $title_clr;
+        border: 1px solid $numbers_clr;
+        border-radius: 52px;
+    }
+}
